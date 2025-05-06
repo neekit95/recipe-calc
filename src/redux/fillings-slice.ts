@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import {fillers} from "../utils/fillings.ts";
+import {fillers} from "../utils/fillers.ts";
 
 
 type FillerName = keyof typeof fillers;

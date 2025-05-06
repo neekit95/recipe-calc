@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	gap: 1rem;
+}
+
+.input {
+	display: flex;
+	padding: 0.4rem;
+	background-color: white;
+	color: black;
+}

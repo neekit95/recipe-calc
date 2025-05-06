@@ -1,4 +1,4 @@
-import { fillers } from '../../utils/fillings';
+import { fillers } from '../../utils/fillers.ts';
 import style from './dropdown.module.scss';
 import { useAppDispatch } from '../../redux/hooks';
 import { setSelectedFiller } from '../../redux/fillings-slice';
