@@ -1,6 +1,6 @@
 import style from './fillers-page.module.scss';
-import { useCakeCalculator} from "../../../lib/hooks/use-cake-calculator.ts";
-import {ingredientNameMap} from "../../../utils/ingridient-mapper.ts";
+import { useCakeCalculator } from "../../../lib/hooks/use-cake-calculator.ts";
+import IngredientList from "../../ingredient-list/ingredient-list.tsx";
 
 const FillersPage = () => {
 	const {
@@ -18,7 +18,7 @@ const FillersPage = () => {
 				<input
 					value={eggsWeight}
 					onChange={handleEggsInputChange}
-					type='number'
+					type="number"
 					className={style.input}
 				/>
 				/
@@ -26,48 +26,75 @@ const FillersPage = () => {
 				<input
 					value={cakeWeightInput}
 					onChange={handleCakeWeightChange}
-					type='number'
+					type="number"
 					className={style.input}
 				/>
 			</div>
+
 			<div className={style.result}>
-				<h2>Бисквит</h2>
-				<h3>База:</h3>
-				{Object.entries(data.biscuit.base).map(([key, value]) => (
-					<p key={key}>{ingredientNameMap[key] ?? key}: {Math.round(value * (+eggsWeight / data.biscuit.base.eggs))}</p>
-				))}
-				<h3>Жидкие ингредиенты:</h3>
-				{Object.entries(data.biscuit.liquidIngredients).map(([key, value]) => (
-					<p key={key}>{ingredientNameMap[key] ?? key}: {Math.round(value * (+eggsWeight / data.biscuit.base.eggs))}</p>
-				))}
-				<h3>Сухие ингредиенты:</h3>
-				{Object.entries(data.biscuit.dryIngredients).map(([key, value]) => (
-					<p key={key}>{ingredientNameMap[key] ?? key}: {Math.round(value * (+eggsWeight / data.biscuit.base.eggs))}</p>
-				))}
+				<div className={style.division}>
+					<h2>Бисквит</h2>
+					<h3>База:</h3>
+					<IngredientList
+						ingredients={data.biscuit.base}
+						eggsWeight={eggsWeight}
+						baseEggs={data.biscuit.base.eggs}
+					/>
+					<h3>Жидкие ингредиенты:</h3>
+					<IngredientList
+						ingredients={data.biscuit.liquidIngredients}
+						eggsWeight={eggsWeight}
+						baseEggs={data.biscuit.base.eggs}
+					/>
+					<h3>Сухие ингредиенты:</h3>
+					<IngredientList
+						ingredients={data.biscuit.dryIngredients}
+						eggsWeight={eggsWeight}
+						baseEggs={data.biscuit.base.eggs}
+					/>
+				</div>
 
-				<h2>Крем для сборки</h2>
-				{Object.entries(data.assemblyCream).map(([key, value]) => (
-					<p key={key}>{ingredientNameMap[key] ?? key}: {Math.round(value * (+eggsWeight / data.biscuit.base.eggs))}</p>
-				))}
+				<div className={style.division}>
+					<h2>Крем для сборки</h2>
+					<IngredientList
+						ingredients={data.assemblyCream}
+						eggsWeight={eggsWeight}
+						baseEggs={data.biscuit.base.eggs}
+					/>
+				</div>
 
-				<h2>Крем для выравнивания</h2>
-				{Object.entries(data.smoothingCream).map(([key, value]) => (
-					<p key={key}>{ingredientNameMap[key] ?? key}: {Math.round(value * (+eggsWeight / data.biscuit.base.eggs))}</p>
-				))}
+				<div className={style.division}>
+					<h2>Крем для выравнивания</h2>
+					<IngredientList
+						ingredients={data.smoothingCream}
+						eggsWeight={eggsWeight}
+						baseEggs={data.biscuit.base.eggs}
+					/>
+				</div>
 
-				<h2>Начинка</h2>
-				<h3>Шаг 1:</h3>
-				{Object.entries(data.filling.step1).map(([key, value]) => (
-					<p key={key}>{ingredientNameMap[key] ?? key}: {Math.round(value * (+eggsWeight / data.biscuit.base.eggs))}</p>
-				))}
-				<h3>Шаг 2:</h3>
-				{Object.entries(data.filling.step2).map(([key, value]) => (
-					<p key={key}>{ingredientNameMap[key] ?? key}: {Math.round(value * (+eggsWeight / data.biscuit.base.eggs))}</p>
-				))}
-				<h3>Шаг 3:</h3>
-				{Object.entries(data.filling.step3).map(([key, value]) => (
-					<p key={key}>{ingredientNameMap[key] ?? key}: {Math.round(value * (+eggsWeight / data.biscuit.base.eggs))}</p>
-				))}
+				<div className={style.division}>
+					<h2>Начинка</h2>
+					<h3>Шаг 1:</h3>
+					<IngredientList
+						ingredients={data.filling.step1}
+						eggsWeight={eggsWeight}
+						baseEggs={data.biscuit.base.eggs}
+					/>
+					<h3>Шаг 2:</h3>
+					<IngredientList
+						ingredients={data.filling.step2}
+						eggsWeight={eggsWeight}
+						baseEggs={data.biscuit.base.eggs}
+					/>
+					<h3>Шаг 3:</h3>
+					<IngredientList
+						ingredients={data.filling.step3}
+						eggsWeight={eggsWeight}
+						baseEggs={data.biscuit.base.eggs}
+					/>
+				</div>
+
+
 			</div>
 		</div>
 	);

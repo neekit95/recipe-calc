@@ -3,7 +3,7 @@ export const ingredientNameMap: Record<string, string> = {
 	sugar: "Сахар",
 	bananaPuree: "Банановое пюре",
 	milk: "Молоко",
-	butter: "Масло",
+	butter: "Сливочное масло",
 	sourCream: "Сметана",
 	flour: "Мука",
 	starch: "Крахмал",
@@ -14,5 +14,7 @@ export const ingredientNameMap: Record<string, string> = {
 	powderedSugar: "Сахарная пудра",
 	boiledCondensedMilk: "Варёная сгущенка",
 	water: "Вода",
-	bananas: "Бананы"
+	bananas: "Бананы",
+	oil: "Подсолнечное масло",
+	apple: "Яблоки"
 };

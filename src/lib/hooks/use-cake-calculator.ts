@@ -17,6 +17,7 @@ export const useCakeCalculator = () => {
 		].reduce((acc, weight) => acc + weight * (eggsWeight / baseWeight), 0) * 0.85;
 
 		const assemblyCreamWeight = Object.values(data.assemblyCream).reduce((acc, weight) => acc + weight * (eggsWeight / baseWeight), 0);
+
 		const smoothingCreamWeight = Object.values(data.smoothingCream).reduce((acc, weight) => acc + weight * (eggsWeight / baseWeight), 0);
 
 		const fillingWeight = [
@@ -24,6 +25,8 @@ export const useCakeCalculator = () => {
 			...Object.values(data.filling.step2),
 			...Object.values(data.filling.step3)
 		].reduce((acc, weight) => acc + weight * (eggsWeight / baseWeight), 0) * 0.95;
+
+		// const impregnationWeight = Object.values(data.impregnation).reduce((acc, weight) => acc + weight * (eggsWeight / baseWeight), 0);
 
 		return Math.round(biscuitWeight + assemblyCreamWeight + smoothingCreamWeight + fillingWeight);
 	}, [data]);
