@@ -16,5 +16,12 @@ export const ingredientNameMap: Record<string, string> = {
 	water: "Вода",
 	bananas: "Бананы",
 	oil: "Подсолнечное масло",
-	apple: "Яблоки"
+	apple: "Яблоки",
+	applePuree: "Яблочное пюре",
+	whiteChocolate: "Белый шоколад"
+};
+
+export const fillerNameMap: Record<string, string> = {
+	bananaCaramel: "Банан-карамель",
+	appleCaramel: "Карамельное яблоко",
 };

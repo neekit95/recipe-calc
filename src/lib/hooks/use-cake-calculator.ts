@@ -5,7 +5,7 @@ import * as React from "react";
 
 export const useCakeCalculator = () => {
 	const selected = useAppSelector(state => state.fillings.selectedFiller);
-	const data = fillers[selected];
+	const data = fillers[selected] as typeof fillers[keyof typeof fillers] & { impregnation?: Record<string, number> };
 
 	const calculateCakeWeight = useCallback((eggsWeight: number) => {
 		const baseWeight = data.biscuit.base.eggs;
@@ -26,9 +26,20 @@ export const useCakeCalculator = () => {
 			...Object.values(data.filling.step3)
 		].reduce((acc, weight) => acc + weight * (eggsWeight / baseWeight), 0) * 0.95;
 
-		// const impregnationWeight = Object.values(data.impregnation).reduce((acc, weight) => acc + weight * (eggsWeight / baseWeight), 0);
+		const impregnationWeight = data.impregnation
+			? Object.values(data.impregnation).reduce(
+					(acc, weight) => acc + weight * (eggsWeight / baseWeight),
+					0
+			  )
+			: 0;
 
-		return Math.round(biscuitWeight + assemblyCreamWeight + smoothingCreamWeight + fillingWeight);
+		return Math.round(
+			biscuitWeight +
+			assemblyCreamWeight +
+			smoothingCreamWeight +
+			fillingWeight +
+			impregnationWeight
+		);
 	}, [data]);
 
 	const initialCakeWeight = calculateCakeWeight(data.biscuit.base.eggs);

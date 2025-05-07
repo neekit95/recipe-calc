@@ -95,6 +95,17 @@ const FillersPage = () => {
 				</div>
 
 
+				{data.impregnation && (
+					<div className={style.division}>
+						<h2>Пропитка</h2>
+						<IngredientList
+							ingredients={data.impregnation}
+							eggsWeight={eggsWeight}
+							baseEggs={data.biscuit.base.eggs}
+						/>
+					</div>
+				)}
+				
 			</div>
 		</div>
 	);
