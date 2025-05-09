@@ -23,12 +23,25 @@ export const ingredientNameMap: Record<string, string> = {
 	orangePeel: "Цедра апельсина",
 	salt: "Соль",
 	vanillaSugar: "Ванильный сахар",
-	lemonJuice: "Сок лимона"
+	lemonJuice: "Сок лимона",
+	peanutButter: "Арахисовая паста",
+	saltedCaramel: "Соленая карамель",
+	peanut: "Арахис",
+	strawberry: "Клубника",
+	strawberryJam: "Клубничный конфитюр",
+	blackChocolate: "Темный шоколад",
+	cherry: "Вишня",
+	kefir: "Кефир"
 };
 
 export const fillerNameMap: Record<string, string> = {
 	bananaCaramel: "Банан - Карамель",
 	appleCaramel: "Карамельное Яблоко",
 	carrot: "Морковь - Апельсин",
-	citrus: 'Цитрус'
+	citrus: 'Цитрус',
+	snickers: "Сникерс",
+	strawberryVanilla: "Клубника - Ваниль",
+	cherryChocolate: "Вишня - Шоколад",
+	redVelvetCherry: "Красный Бархат (Вишня)",
+	redVelvetStrawberry: "Красный Бархат (Клубника)"
 };

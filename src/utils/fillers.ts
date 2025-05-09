@@ -175,5 +175,228 @@ export const fillers = {
 				butter: 54,
 			},
 		},
-	}
+	},
+
+	snickers: {
+		biscuit: {
+			base: {
+				eggs: 170,
+				sugar: 195,
+			},
+			liquidIngredients: {
+				oil: 48,
+				milk: 130,
+			},
+			dryIngredients: {
+				flour: 190,
+				cacao: 38,
+				bakingPowder: 6,
+				salt: 3,
+				bakingSoda: 3
+			},
+		},
+		assemblyCream: {
+			creamCheese: 352,
+			cream: 112,
+			powderedSugar: 96,
+			peanutButter: 64
+
+		},
+		smoothingCream: {
+			butter: 100,
+			powderedSugar: 100,
+			creamCheese: 300,
+		},
+		filling: {
+			step1: {
+				sugar: 78,
+				cream: 54,
+			},
+			step2: {
+				saltedCaramel: 120,
+				salt: 1.5,
+			},
+			step3: {
+				peanut: 60,
+			},
+		},
+		impregnation: {
+			milk: 100
+		}
+	},
+
+	strawberryVanilla: {
+		biscuit: {
+			base: {
+				eggs: 180,
+				sugar: 180,
+			},
+			liquidIngredients: {
+				oil: 50,
+				milk: 130,
+			},
+			dryIngredients: {
+				flour: 200,
+				vanillaSugar: 10,
+				bakingPowder: 6,
+				salt: 3,
+			},
+		},
+		assemblyCream: {
+			creamCheese: 310,
+			cream: 100,
+			powderedSugar: 85,
+			strawberryJam: 60
+
+		},
+		smoothingCream: {
+			butter: 100,
+			powderedSugar: 100,
+			creamCheese: 300,
+		},
+		filling: {
+			step1: {
+				sugar: 40,
+				water: 20,
+			},
+			step2: {
+				starch: 20
+			},
+			step3: {
+				strawberry: 240,
+			},
+		},
+		impregnation: {
+			milk: 100
+		}
+	},
+
+	cherryChocolate: {
+		biscuit: {
+			base: {
+				eggs: 170,
+				sugar: 195,
+			},
+			liquidIngredients: {
+				oil: 48,
+				milk: 130,
+			},
+			dryIngredients: {
+				flour: 190,
+				bakingPowder: 6,
+				bakingSoda: 3,
+				salt: 3,
+				cacao: 38
+			},
+		},
+		assemblyCream: {
+			creamCheese: 320,
+			cream: 96,
+			powderedSugar: 80,
+			blackChocolate: 140,
+		},
+		smoothingCream: {
+			butter: 100,
+			powderedSugar: 100,
+			creamCheese: 300,
+		},
+		filling: {
+			step1: {
+				sugar: 35,
+				water: 15,
+			},
+			step2: {
+				starch: 15
+			},
+			step3: {
+				cherry: 200,
+			},
+		},
+		impregnation: {
+			milk: 120
+		}
+	},
+
+	redVelvetCherry: {
+		biscuit: {
+			base: {
+				eggs: 126,
+				sugar: 189,
+			},
+			liquidIngredients: {
+				oil: 84,
+				kefir: 168,
+			},
+			dryIngredients: {
+				flour: 224,
+				bakingPowder: 5.6,
+				bakingSoda: 1.4,
+				cacao: 10.5,
+			},
+		},
+		assemblyCream: {
+			creamCheese: 400,
+			cream: 120,
+			powderedSugar: 104,
+		},
+		smoothingCream: {
+			butter: 100,
+			powderedSugar: 100,
+			creamCheese: 300,
+		},
+		filling: {
+			step1: {
+				sugar: 35,
+				water: 15,
+			},
+			step2: {
+				starch: 15
+			},
+			step3: {
+				cherry: 200,
+			},
+		},
+	},
+
+	redVelvetStrawberry: {
+		biscuit: {
+			base: {
+				eggs: 126,
+				sugar: 189,
+			},
+			liquidIngredients: {
+				oil: 84,
+				kefir: 168,
+			},
+			dryIngredients: {
+				flour: 224,
+				bakingPowder: 5.6,
+				bakingSoda: 1.4,
+				cacao: 10.5,
+			},
+		},
+		assemblyCream: {
+			creamCheese: 400,
+			cream: 120,
+			powderedSugar: 104,
+		},
+		smoothingCream: {
+			butter: 100,
+			powderedSugar: 100,
+			creamCheese: 300,
+		},
+		filling: {
+			step1: {
+				sugar: 38,
+				water: 18,
+			},
+			step2: {
+				starch: 18
+			},
+			step3: {
+				strawberry: 225,
+			},
+		},
+
+	},
 };
