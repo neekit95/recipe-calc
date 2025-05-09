@@ -3,12 +3,14 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	border-bottom: 1px solid white;
+	//border-bottom: 1px solid white;
 	position: fixed;
 	top:0;
 	justify-self: center	;
 	height: 3rem;
 	z-index: 100;
+	background-color: grey;
+
 }
 
 .wrapper {

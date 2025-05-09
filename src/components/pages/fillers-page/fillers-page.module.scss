@@ -1,0 +1,52 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+
+	h1 {
+		padding-bottom: 1rem;
+	}
+}
+
+.top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding-bottom: 1rem;
+}
+
+.input {
+	display: flex;
+	padding: 0.4rem;
+	background-color: white;
+	color: black;
+}
+.result {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 2rem;
+	width: 100%;
+	padding-top: 1rem;
+}
+
+.division {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid white;
+	border-radius: 5px;
+	gap: 0.3rem;
+	h2 {
+		color: #bfc7fd;
+	}
+	h3 {
+
+		text-decoration: underline;
+		text-underline-offset: 0.3rem;
+	}
+}

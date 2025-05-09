@@ -1,4 +1,5 @@
-import { fillers } from '../../utils/fillings';
+import { fillers } from '../../utils/fillers.ts';
+import { fillerNameMap} from "../../utils/ingridient-mapper.ts";
 import style from './dropdown.module.scss';
 import { useAppDispatch } from '../../redux/hooks';
 import { setSelectedFiller } from '../../redux/fillings-slice';
@@ -19,7 +20,7 @@ const Dropdown = ({ onSelect }: DropdownProps) => {
 		<div className={style.container}>
 			{Object.entries(fillers).map(([key]) => (
 				<button key={key} onClick={() => handleSelect(key)} className={style.button}>
-					{key}
+					{fillerNameMap[key] ?? key}
 				</button>
 			))}
 		</div>
