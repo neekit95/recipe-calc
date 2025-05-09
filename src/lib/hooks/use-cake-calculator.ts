@@ -54,6 +54,12 @@ export const useCakeCalculator = () => {
 		}
 	}, [eggsWeight, activeInput, calculateCakeWeight]);
 
+	useEffect(() => {
+		const initialEggs = data.biscuit.base.eggs;
+		setEggsWeight(initialEggs);
+		setCakeWeightInput(calculateCakeWeight(initialEggs));
+	}, [selected, data, calculateCakeWeight]);
+
 	const handleEggsInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
 		setActiveInput('eggs');
