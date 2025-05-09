@@ -80,6 +80,7 @@ export const useCakeCalculator = () => {
 		cakeWeightInput,
 		handleEggsInputChange,
 		handleCakeWeightChange,
-		data
+		data,
+		selected
 	};
 };

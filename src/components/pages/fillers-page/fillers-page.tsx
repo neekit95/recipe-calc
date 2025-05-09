@@ -1,6 +1,7 @@
 import style from './fillers-page.module.scss';
 import { useCakeCalculator } from "../../../lib/hooks/use-cake-calculator.ts";
 import IngredientList from "../../ingredient-list/ingredient-list.tsx";
+import {fillerNameMap} from "../../../utils/ingridient-mapper.ts";
 
 const FillersPage = () => {
 	const {
@@ -8,11 +9,13 @@ const FillersPage = () => {
 		cakeWeightInput,
 		handleEggsInputChange,
 		handleCakeWeightChange,
-		data
+		data,
+		selected
 	} = useCakeCalculator();
 
 	return (
 		<div className={style.container}>
+			<h1>{fillerNameMap[selected] ?? selected}</h1>
 			<div className={style.top}>
 				<p>Вес яиц:</p>
 				<input
@@ -105,7 +108,7 @@ const FillersPage = () => {
 						/>
 					</div>
 				)}
-				
+
 			</div>
 		</div>
 	);
